@@ -1,0 +1,209 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#__next {
+  background-color: white;
+  height: 100%;
+  width : 100%;
+}
+
+#icon-eye {
+  width   : 250px;
+  margin  : auto;
+  padding : 20px;
+  overflow: auto;
+  color   : white;
+}
+
+.main-container {
+  background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0)), url('../../public/images/pixelbg.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
+
+.advertise {
+  background: url('../../public/images/grass.webp') no-repeat bottom;
+}
+
+@media only screen and (max-width: 1074px) {
+  .advertise {
+    background: none;
+  }
+}
+
+.ribbon {
+  background: url('../../public/images/ribbon.png') no-repeat;
+  background-size: 100% auto;
+  width: 1413px;
+  height: 345px;
+}
+
+.start-date-badge {
+  background: url('../../public/images/background_start.png') no-repeat;
+  background-size: cover;
+  width: 230px;
+  height: 239px;
+  transition: all 500ms;
+}
+
+.start-date-badge:hover {
+  width: 240px;
+  height: 249px;
+}
+
+.overview-shadow {
+  box-shadow: var(--shd,0 5px 4px rgba(0,0,0,.6));
+}
+
+.mint-card {
+  width: 370px;
+  }
+
+.members-background {
+  background-color: rgba(255,255,255,.7);
+}
+
+.roadmap {
+  background: url('../../public/images/roadmap.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+}
+
+.tab-content {
+  max-height: 0;
+  -webkit-transition: max-height .35s;
+  -o-transition: max-height .35s;
+  transition: max-height .35s;
+}
+
+.overview-background-color {
+  background-color: #131946;
+}
+
+.button-mint {
+  border: 10px solid #ff5cb6;
+  background-color: rgba(19, 25, 70, 1);
+  width: 280px;
+  height: 160px;
+  box-shadow: var(--shd,0 3px 3px rgba(0,0,0,.6));
+  transition: background-color 500ms;
+}
+
+.button-mint:hover {
+  background-color: rgb(42, 51, 122);
+}
+
+/* :checked - resize to full height */
+.tab input:checked ~ .tab-content {
+  max-height: 100vh;
+}
+
+/* Label formatting when open */
+.tab input:checked + label{
+  /*@apply text-xl p-5 border-l-2 border-indigo-500 bg-gray-100 text-indigo*/
+  font-size: 1.25rem; /*.text-xl*/
+  padding: 1.25rem; /*.p-5*/
+  border-left-width: 2px; /*.border-l-2*/
+  /* border-color: #6574cd; .border-indigo */
+  /* background-color: #f8fafc; .bg-gray-100 */
+  /* color: #6574cd; .text-indigo */
+}
+
+/* Icon */
+.tab label::after {
+  float:right;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5;
+  font-size: 1.25rem;
+  text-align: center;
+  -webkit-transition: all .35s;
+  -o-transition: all .35s;
+  transition: all .35s;
+}
+
+/* Icon formatting - closed */
+.tab input[type=checkbox] + label::after {
+  content: "+";
+  font-weight:bold; /*.font-bold*/
+  border-width: 1px; /*.border*/
+  border-radius: 9999px; /*.rounded-full */
+  /* border-color: #b8c2cc; .border-grey */
+}
+
+.tab input[type=radio] + label::after {
+  content: "\25BE";
+  font-weight:bold; /*.font-bold*/
+  border-width: 1px; /*.border*/
+  border-radius: 9999px; /*.rounded-full */
+  /* border-color: #b8c2cc; .border-grey */
+}
+
+/* Icon formatting - open */
+.tab input[type=checkbox]:checked + label::after {
+  transform: rotate(315deg);
+  /* background-color: #6574cd; .bg-indigo */
+  /* color: #f8fafc; .text-grey-lightest */
+}
+
+.tab input[type=radio]:checked + label::after {
+  transform: rotateX(180deg);
+  /* background-color: #6574cd; .bg-indigo */
+  /* color: #f8fafc; .text-grey-lightest */
+}
+
+.top-z-index {
+  z-index: 1000;
+}
+
+@font-face {
+  font-family: 'Amiga';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Amiga'), url('../../public/fonts/amiga4ever.ttf') format('truetype');
+}
+
+.amiga-font {
+  font-family: 'Amiga' !important;
+}
+
+.color-936 {
+  color:#B8F200;
+}
+
+.color-lightpink {
+  color: #FF5CB6;
+}
+
+.color-lightcyan {
+  color: #25DFF7;
+}
+
+.background-qa {
+  background-color: rgba(207,199,242,1);
+}
+
+.color-magenta {
+  color: rgba(85,14,155,1);
+}
+
+.shadow-box {
+   margin-top: 0;
+}
